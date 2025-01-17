@@ -7,8 +7,9 @@ const navOpenBtn = document.querySelector("[data-nav-open-btn]");
 const navBar = document.querySelector("[data-navbar]");
 const navCloseBtn = document.querySelector("[data-nav-close-btn]");
 const overlay = document.querySelector("[data-overlay]")
+const dropDown = document.querySelector('.navbar-dropdown')
 
-console.log(navOpenBtn, navBar, navCloseBtn, overlay);
+console.log(navOpenBtn, navBar, navCloseBtn, overlay, dropDown);
 
 const elemArr = [navCloseBtn, overlay, navOpenBtn];
 
