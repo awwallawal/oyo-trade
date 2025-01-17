@@ -7,9 +7,18 @@ const navOpenBtn = document.querySelector("[data-nav-open-btn]");
 const navBar = document.querySelector("[data-navbar]");
 const navCloseBtn = document.querySelector("[data-nav-close-btn]");
 const overlay = document.querySelector("[data-overlay]")
-const dropDown = document.querySelector('.navbar-dropdown')
+const dropDown = document.querySelectorAll('.navbar-dropdown')
+const ionDrop = document.querySelector('.ion-drop');
+const aboutt = document.querySelectorAll(".aboutt")
 
-console.log(navOpenBtn, navBar, navCloseBtn, overlay, dropDown);
+console.log(navOpenBtn, navBar, navCloseBtn, overlay, dropDown, ionDrop, aboutt);
+
+for(let i = 0; i < aboutt.length; i++) {
+    aboutt[i].addEventListener("click", function (){
+        dropDown[i].classList.toggle('active')
+    })
+}
+
 
 const elemArr = [navCloseBtn, overlay, navOpenBtn];
 
@@ -27,10 +36,13 @@ console.log(navbarLinks);
 
 for(let i = 0; i < navbarLinks.length; i++){
     navbarLinks[i].addEventListener ("click", function(){
-        navBar.classList.toggle('active');
-        overlay.classList.toggle('active');
+        // navBar.classList.toggle('active');
+        // overlay.classList.toggle('active');
+        
     });
 }
+
+
 
 // Go top button shows when windows scroll down to 400px
 
