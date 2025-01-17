@@ -13,12 +13,20 @@ const aboutt = document.querySelectorAll(".aboutt")
 
 console.log(navOpenBtn, navBar, navCloseBtn, overlay, dropDown, ionDrop, aboutt);
 
-for(let i = 0; i < aboutt.length; i++) {
-    aboutt[i].addEventListener("click", function (){
-        dropDown[i].classList.toggle('active')
-    })
-}
+for (let i = 0; i < aboutt.length; i++) {
+    aboutt[i].addEventListener("click", function () {
+        // Check if the clicked dropdown is already active
+        const isActive = dropDown[i].classList.contains('active');
 
+        // Remove 'active' class from all dropdowns
+        dropDown.forEach((dropdown) => dropdown.classList.remove('active'));
+
+        // Toggle 'active' class only if it was not active
+        if (!isActive) {
+            dropDown[i].classList.add('active');
+        }
+    });
+}
 
 const elemArr = [navCloseBtn, overlay, navOpenBtn];
 
